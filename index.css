@@ -1,14 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,700&subset=latin,latin-ext);
 
 @font-face {
-  font-family: 'webglearth';
-  src:url('fonts/webglearth.eot?8bl3d6');
-  src:url('fonts/webglearth.eot?#iefix8bl3d6') format('embedded-opentype'),
-      url('fonts/webglearth.svg?8bl3d6#webglearth') format('svg'),
-      url('fonts/webglearth.woff?8bl3d6') format('woff'),
-      url('fonts/webglearth.ttf?8bl3d6') format('truetype');
+  font-family: 'icons';
+  src:
+    url('fonts/icons.woff2?xrlowm') format('woff2'),
+    url('fonts/icons.ttf?xrlowm') format('truetype'),
+    url('fonts/icons.woff?xrlowm') format('woff'),
+    url('fonts/icons.svg?xrlowm#icons') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+[class^="icon"], [class*=" icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html, body {width:100%;height:100%;}
@@ -18,9 +33,11 @@ img {border:none;}
 
 #logo, #klokan, #share, #sidelinks li a:before, #sidelinks li a:after {font-family:'webglearth';text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow:hidden;text-shadow:#333 0 0 5px;}
 
-#logo {position:absolute;top:40px;left:0;width:200px;height:55px;line-height:55px;z-index:1;background:rgba(255,255,255,0.15);text-align:center;}
-#logo:before {content:"\e607";font-size:175px;color:#fff;}
-#geocoder {position:absolute;top:40px;height:24px;right:0;width:204px;z-index:1;padding:2px 4px;border:none;}
+#logo {position:absolute;top:40px;left:0;width:200px;height:62px;line-height:55px;z-index:1;background:rgba(255,255,255,0.10);text-align:center; border-radius: 5px;}
+#logo:before {content:"\e607";font-size:175px;color:#fff;font-family: 'icons'}
+#geocoder {position:absolute;top:40px;height:30px;right:15px;width:175px;z-index:1;padding:4px 4px;border:none; background:rgba(255,255,255,0.15);border-radius: 5px;color:rgba(255,255,255,1);}
+#geocoder::placeholder {color:rgba(255,255,255,0.5);}
+
 .ac-renderer {position:absolute;right:0;width:204px;z-index:1;font-size:12px;background:#fff;border:0 solid #000;border-width:1px 0;overflow:hidden;white-space:nowrap;}
 .ac-row {border-bottom:1px solid #666;width:100%;overflow:hidden;text-overflow:ellipsis;padding:1px 0 1px 2px;cursor:pointer;}
 .ac-row .suffix {
@@ -35,30 +52,35 @@ img {border:none;}
   width:100%;
 }
 .ac-row:hover {background:#ccc;}
-#maptype {position:absolute;top:67px;height:24px;right:0;width:204px;z-index:1;border:none;}
+#maptype {position:absolute;top:78px;height:28px;right:15px;width:175px;z-index:1;border:none;}
 
 .link {color:#eee;background:rgba(255,255,255,0.15);}
 .link:hover {color:#fff;background:rgba(255,255,255,0.175);}
 
+#maptiler {position:absolute;bottom:40px;left:30px;width:160px;height:55px;z-index:1;background:rgba(255,255,255,0.15);border-radius: 5px;}
+#maptiler img {width:95%; padding: 10px 5px 10px 5px}
 #klokan {position:absolute;bottom:62px;right:0;width:231px;z-index:1;height:58px;}
-#klokan:before {content:"\e600";font-size:225px;line-height:58px;}
+#klokan:before {content:"\e600";font-size:225px;line-height:58px; font-family: 'icons'}
 #webglearthdiv {position:absolute !important;top:0;right:0;bottom:0;left:0;background:#000 url(stars.jpg);background-size:cover;touch-action:none;}
 
-#share {position:absolute;bottom:75px;left:0;padding:0;list-style:none;margin:0;}
-#share li {float:left;line-height:32px;margin-right:2px;}
-#share li a {font-size:32px;overflow:hidden;display:block;width:33px;height:32px;text-decoration:none;}
-#share .gplus:before {content:"\e606";}
-#share .facebook:before {content:"\e605";}
-#share .twitter:before {content:"\e604";}
+#share {position:absolute;bottom:25px;right:15px;padding:0;list-style:none;margin:0;}
+#share li {line-height:32px;margin:10px 10px 10px 10px;}
+#share li a {font-size:32px;overflow:hidden;display:block;width:33px;height:32px;text-decoration:none; border-radius: 50%;}
+#share li p {color:rgba(255,255,255,0.9); font-family: 'Open Sans',Arial,sans-serif;position:relative;right:7px;}
+#share .gplus:before {content:"\4a";font-family: 'icons'}
+#share .facebook:before {content:"\e605";font-family: 'icons'}
+#share .twitter:before {content:"\54";font-family: 'icons'}
 
-#sidelinks {position:absolute;top:125px;right:0;padding:0;list-style:none;margin:0;}
+#sidelinks {position:absolute;top:175px;right:0;padding:0;list-style:none;margin:0;}
 #sidelinks li {font-size:16px;line-height:18px;margin-bottom:2px;}
-#sidelinks li a {overflow:hidden;display:block;width:120px;text-decoration:none;text-align:center;padding:10px 0;}
-#sidelinks .maptiler:after {display:block;content:"\e601";font-size:90px;line-height:90px;}
-#sidelinks .jsapi:before {display:block;content:"\e602";font-size:45px;line-height:55px;}
-#sidelinks .github:before {display:block;content:"\e603";font-size:45px;line-height:55px;}
-.jsapi, .github {background:none;}
+#sidelinks li a {overflow:hidden;display:block;width:75px;text-decoration:none;text-align:center;padding:20px 10px;}
+#sidelinks .maptiler::before {display:block;content:"\6d";font-size:50px;line-height:60px;font-family: 'icons'}
+#sidelinks .jsapi:before {display:block;content:"\e602";font-size:50px;line-height:60px;font-family: 'icons'}
+#sidelinks .github:before {display:block;content:"\67";font-size:50px;line-height:60px;font-family: 'icons'}
+.jsapi, .github, .maptiler {background:rgba(255,255,255,0.07);margin: -4px 15px -4px 0;border-radius: 5px;}
 
 .plovr-error-report {position:absolute;z-index:10;}
 
 .cesium-credit-textContainer a {color:#fff !important;}
+nt: "\e607";
+}
