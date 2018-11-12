@@ -25,6 +25,7 @@
     }
   </script>
  </head>
+
  <body onload="javascript:new WebGLEarth();">
    <a href="http://www.webglearth.com/" id="logo"></a>
    <form><input type="search" name="geocoder" id="geocoder" label="Find a place..." placeholder="Find a place..." /></form>
@@ -34,16 +35,18 @@
      <option value="osm">OpenStreetMap</option>
    </select>
    <div id="webglearthdiv"></div>
+
+   <ul id="sidelinks">
+     <li><a class="link jsapi" href="http://examples.webglearth.com/" target="_blank">API</a></li>
+     <li><a class="link github" href="https://github.com/webglearth/webglearth2" target="_blank">GitHub</a></li>
+     <li><a class="link maptiler" href="http://www.maptiler.com/" target="_blank">Hosting</a></li>
+   </ul>
    <ul id="share">
+     <li><p>Share</p></li>
+     <li><a class="link twitter" href="https://twitter.com/share?original_referer=http://www.webglearth.com/&amp;text=WebGL Earth - 3D digital globe for web and mobile devices" target="_blank" onclick="popup(this.href,450,257);return false">Tweet</a></li>
      <li><a class="link gplus" href="https://plus.google.com/share?url=http://www.webglearth.com/" target="_blank" onclick="popup(this.href,610,315);return false">Google+</a></li>
      <li><a class="link facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.webglearth.com/" target="_blank" onclick="popup(this.href,645,353);return false">Facebook</a></li>
-     <li><a class="link twitter" href="https://twitter.com/share?original_referer=http://www.webglearth.com/&amp;text=WebGL Earth - 3D digital globe for web and mobile devices" target="_blank" onclick="popup(this.href,450,257);return false">Tweet</a></li>
    </ul>
-   <ul id="sidelinks">
-     <li><a class="link maptiler" href="http://www.maptiler.com/" target="_blank">Prepare your data with<!--MapTiler--></a></li>
-     <li><a class="link jsapi" href="http://examples.webglearth.com/" target="_blank">JavaScript API</a></li>
-     <li><a class="link github" href="https://github.com/webglearth/webglearth2" target="_blank">GitHub</a></li>
-   </ul>
-   <a href="http://www.klokantech.com/" id="klokan" class="link"></a>
+   <a href="https://www.maptiler.com/" id="maptiler"><img src="/maptiler-logo.png" alt="MapTiler logo"></a>
  </body>
 </html>
