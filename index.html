@@ -8,11 +8,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="robots" content="index, all" />
   <meta name="description" content="Open-source virtual planet web application running in any web browser with support for WebGL HTML5 standard.">
-  <meta name="author" content="Klokan Technologies GmbH">
+  <meta name="author" content="MapTiler AG">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:title" content="WebGL Earth - 3D digital globe for web and mobile devices" />
   <meta property="og:description" content="Open-source virtual planet web application running in any web browser with support for WebGL HTML5 standard." />
-  <meta property="og:image" content="http://www.webglearth.com/webglearth.png" />
+  <meta property="og:image" content="https://www.webglearth.com/webglearth.png" />
   <title>WebGL Earth - 3D digital globe for web and mobile devices</title>
 
   <link rel="stylesheet" type="text/css" href="index.css" />
@@ -27,26 +27,26 @@
  </head>
 
  <body onload="javascript:new WebGLEarth();">
-   <a href="http://www.webglearth.com/" id="logo"></a>
+   <a href="https://www.webglearth.com/" id="logo"></a>
    <form><input type="search" name="geocoder" id="geocoder" label="Find a place..." placeholder="Find a place..." /></form>
    <select id="maptype">
-     <option value="hybrid">KlokanTech Satellite Hybrid</option>
-     <option value="streets">KlokanTech Streets</option>
+     <option value="hybrid">MapTiler Satellite</option>
+     <option value="streets">MapTiler Streets</option>
      <option value="osm">OpenStreetMap</option>
    </select>
    <div id="webglearthdiv"></div>
 
    <ul id="sidelinks">
-     <li><a class="link jsapi" href="http://examples.webglearth.com/" target="_blank">API</a></li>
+     <li><a class="link jsapi" href="http://examples.webglearth.com/" target="_blank">Examples</a></li>
      <li><a class="link github" href="https://github.com/webglearth/webglearth2" target="_blank">GitHub</a></li>
-     <li><a class="link maptiler" href="http://www.maptiler.com/" target="_blank">Hosting</a></li>
+     <li><a class="link maptiler" href="https://maptiler.com/cloud/" target="_blank">Maps API</a></li>
    </ul>
    <ul id="share">
      <li><p>Share</p></li>
      <li><a class="link twitter" href="https://twitter.com/share?original_referer=http://www.webglearth.com/&amp;text=WebGL Earth - 3D digital globe for web and mobile devices" target="_blank" onclick="popup(this.href,450,257);return false">Tweet</a></li>
-     <li><a class="link gplus" href="https://plus.google.com/share?url=http://www.webglearth.com/" target="_blank" onclick="popup(this.href,610,315);return false">Google+</a></li>
+<!---     <li><a class="link gplus" href="https://plus.google.com/share?url=http://www.webglearth.com/" target="_blank" onclick="popup(this.href,610,315);return false">Google+</a></li> -->
      <li><a class="link facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.webglearth.com/" target="_blank" onclick="popup(this.href,645,353);return false">Facebook</a></li>
    </ul>
-   <a href="https://www.maptiler.com/" id="maptiler"><img src="/maptiler-logo.png" alt="MapTiler logo"></a>
+   <a href="https://maptiler.com/" id="maptiler"><img src="/maptiler-logo.png" alt="MapTiler logo"></a>
  </body>
 </html>
